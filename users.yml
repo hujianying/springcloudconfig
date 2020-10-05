@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: users
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
