@@ -1,1 +1,2 @@
-password: 111111
+server:
+  port: 10000
