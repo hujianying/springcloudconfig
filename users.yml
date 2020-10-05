@@ -1,1 +1,38 @@
-username: tom
+spring:
+  application:
+    name: users
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: utf-8
+    enabled: true
+    servlet:
+      content-type: text/html
+    resources:
+      static-locations: classpath:/static/
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
+students:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+feign:
+  hystrix:
+    enabled: true    #开启openfeign支持服务降级
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+        loggerLevel: full  #默认开启所有服务的日志
+
+logging:
+  level:
+    com:
+      wsjy:
+        clients: debug   #指定feign client所在包的日志记录级别
