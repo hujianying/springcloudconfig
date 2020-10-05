@@ -1,3 +1,4 @@
+username: kate
 spring:
   application:
     name: users
