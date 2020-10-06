@@ -1,4 +1,4 @@
-username: kate
+username: jack
 spring:
   rabbitmq:
     host: 192.168.0.118
