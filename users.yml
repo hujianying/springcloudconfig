@@ -1,5 +1,10 @@
 username: rose
 spring:
+  rabbitmq:
+    host: 192.168.0.118
+    port: 5672
+    username: admin
+    password: admin
   application:
     name: users
   thymeleaf:
